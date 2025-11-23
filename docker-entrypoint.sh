@@ -39,6 +39,10 @@ php artisan route:cache
 echo "Publishing Filament assets..."
 php artisan filament:assets || true
 
+# Publish Livewire assets
+echo "Publishing Livewire assets..."
+php artisan livewire:publish --assets || true
+
 # Cache views (skip if error)
 echo "Caching views..."
 php artisan view:cache || true
