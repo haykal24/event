@@ -28,9 +28,9 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('MESQUITE')
-            ->brandLogo(asset('assets/images/medal.png'))
+            ->brandLogo(secure_asset('assets/images/medal.png'))
             ->brandLogoHeight('2rem')
-            ->favicon(asset('assets/images/medal.png'))
+            ->favicon(secure_asset('assets/images/medal.png'))
             ->darkMode(true)
             ->colors([
                 'primary' => Color::Orange,
