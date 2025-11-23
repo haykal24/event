@@ -15,14 +15,18 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             AdminUserSeeder::class,
-            // Other seeders...
+            EventCategorySeeder::class,
+            VenueSeeder::class,
+            EventSeeder::class,
+            EventPrizeSeeder::class,
+            PromoCodeSeeder::class,
         ]);
 
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
