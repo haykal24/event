@@ -14,39 +14,49 @@ class EventCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        EventCategory::create([
-            'name' => 'Running',
-            'slug' => Str::slug('Running'),
-            'description' => 'Marathon, Fun Run, Sprint',
-            'icon' => 'run.png'
-        ]);
+        EventCategory::firstOrCreate(
+            ['slug' => Str::slug('Running')],
+            [
+                'name' => 'Running',
+                'description' => 'Marathon, Fun Run, Sprint',
+                'icon' => 'run.png'
+            ]
+        );
 
-        EventCategory::create([
-            'name' => 'Swimming',
-            'slug' => Str::slug('Swimming'),
-            'description' => 'Freestyle, Butterfly, Breaststroke',
-            'icon' => 'swim.png'
-        ]);
+        EventCategory::firstOrCreate(
+            ['slug' => Str::slug('Swimming')],
+            [
+                'name' => 'Swimming',
+                'description' => 'Freestyle, Butterfly, Breaststroke',
+                'icon' => 'swim.png'
+            ]
+        );
 
-        EventCategory::create([
-            'name' => 'Boxing',
-            'slug' => Str::slug('Boxing'),
-            'description' => 'Amateur Boxing, Professional Boxing',
-            'icon' => 'boxing.png'
-        ]);
+        EventCategory::firstOrCreate(
+            ['slug' => Str::slug('Boxing')],
+            [
+                'name' => 'Boxing',
+                'description' => 'Amateur Boxing, Professional Boxing',
+                'icon' => 'boxing.png'
+            ]
+        );
 
-        EventCategory::create([
-            'name' => 'Tennis',
-            'slug' => Str::slug('Tennis'),
-            'description' => 'Singles, Doubles, Mixed Doubles',
-            'icon' => 'tennis.png'
-        ]);
+        EventCategory::firstOrCreate(
+            ['slug' => Str::slug('Tennis')],
+            [
+                'name' => 'Tennis',
+                'description' => 'Singles, Doubles, Mixed Doubles',
+                'icon' => 'tennis.png'
+            ]
+        );
 
-        EventCategory::create([
-            'name' => 'Powerlifting',
-            'slug' => Str::slug('Powerlifting'),
-            'description' => 'Deadlift, Squat, Bench Press',
-            'icon' => 'power.png'
-        ]);
+        EventCategory::firstOrCreate(
+            ['slug' => Str::slug('Powerlifting')],
+            [
+                'name' => 'Powerlifting',
+                'description' => 'Deadlift, Squat, Bench Press',
+                'icon' => 'power.png'
+            ]
+        );
     }
 }
