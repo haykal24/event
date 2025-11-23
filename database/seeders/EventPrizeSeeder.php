@@ -40,7 +40,13 @@ class EventPrizeSeeder extends Seeder
             ];
 
             foreach ($prizes as $prize) {
-                EventPrize::create($prize);
+                EventPrize::firstOrCreate(
+                    [
+                        'event_id' => $prize['event_id'],
+                        'name' => $prize['name']
+                    ],
+                    $prize
+                );
             }
         }
     }
